@@ -1,0 +1,4 @@
+title: Pages
+modelClass: Branmuffin\Spa\Models\Pages
+toolbar:
+    buttons: reorder_toolbar

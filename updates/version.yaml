@@ -1,0 +1,17 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table branmuffin_spa_pages'
+    - builder_table_create_branmuffin_spa_pages.php
+1.0.3:
+    - 'Updated table branmuffin_spa_pages'
+    - builder_table_update_branmuffin_spa_pages.php
+1.0.4:
+    - 'Created table branmuffin_spa_categories'
+    - builder_table_create_branmuffin_spa_categories.php
+1.0.5:
+    - 'Updated table branmuffin_spa_pages'
+    - builder_table_update_branmuffin_spa_pages_2.php
+1.0.6:
+    - 'Updated table branmuffin_spa_categories'
+    - builder_table_update_branmuffin_spa_categories.php

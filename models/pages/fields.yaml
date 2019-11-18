@@ -1,0 +1,23 @@
+fields:
+    name:
+        label: Name
+        span: auto
+        type: text
+    slug:
+        label: Slug
+        span: auto
+        preset:
+            field: name
+            type: slug
+        type: text
+    text:
+        label: 'Page Text'
+        size: giant
+        span: full
+        type: richeditor
+    category:
+        label: Category
+        nameFrom: title
+        descriptionFrom: text
+        span: auto
+        type: relation

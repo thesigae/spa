@@ -1,0 +1,10 @@
+name: Pages
+form: $/branmuffin/spa/models/pages/fields.yaml
+modelClass: Branmuffin\Spa\Models\Pages
+defaultRedirect: branmuffin/spa/pages
+create:
+    redirect: 'branmuffin/spa/pages/update/:id'
+    redirectClose: branmuffin/spa/pages
+update:
+    redirect: branmuffin/spa/pages
+    redirectClose: branmuffin/spa/pages

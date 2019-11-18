@@ -1,0 +1,20 @@
+plugin:
+    name: 'branmuffin.spa::lang.plugin.name'
+    description: 'branmuffin.spa::lang.plugin.description'
+    author: Branmuffin
+    icon: oc-icon-file-powerpoint-o
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Spa
+        url: branmuffin/spa/pages
+        icon: icon-file-powerpoint-o
+        sideMenu:
+            side-menu-item:
+                label: Pages
+                url: branmuffin/spa/pages
+                icon: icon-file-powerpoint-o
+            side-menu-item2:
+                label: Categories
+                url: branmuffin/spa/categories
+                icon: icon-sitemap

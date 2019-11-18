@@ -1,0 +1,10 @@
+name: Categories
+form: $/branmuffin/spa/models/categories/fields.yaml
+modelClass: Branmuffin\Spa\Models\Categories
+defaultRedirect: branmuffin/spa/categories
+create:
+    redirect: 'branmuffin/spa/categories/update/:id'
+    redirectClose: branmuffin/spa/categories
+update:
+    redirect: branmuffin/spa/categories
+    redirectClose: branmuffin/spa/categories

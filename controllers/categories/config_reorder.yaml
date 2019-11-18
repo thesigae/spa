@@ -1,0 +1,4 @@
+title: Categories
+modelClass: Branmuffin\Spa\Models\Categories
+toolbar:
+    buttons: reorder_toolbar

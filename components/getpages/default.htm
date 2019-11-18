@@ -1,0 +1,105 @@
+{% set pages = __SELF__.getPages() %}
+{% set page = __SELF__.getPage() %}
+{% set section = __SELF__.getSection() %}
+{% set defaultPage = __SELF__.getDefaultPage() %}
+
+{% put styles %}
+<style>
+.spaCurrent {
+    cursor: default;
+    color: black;
+    text-decoration: none;
+}
+.spaCurrent:hover {
+    color: black;
+}
+.sr-l {
+    width:15%;
+    float:left;
+    background:#eee;
+    padding-bottom: 15px;
+}
+.sr-l li {
+    list-style: none;
+}
+.sr-r {
+    display: inline-block;
+    width: 85%;
+    padding-bottom: 15px;
+}
+h2 {
+    margin: 15px 0;
+    padding: 0 2% 0 4%;
+}
+ul {
+    margin:0;
+}
+.pages {
+    float: left;
+    padding: 0 2% 0 4%;
+}
+.content {
+    padding: 0 4% 0 2%;
+}
+#spaImageModal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+}
+.imageModal {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    background: #000000c7;
+    padding: 2% 0;
+    cursor: pointer;
+    overflow:auto;
+}
+.imageModal img {
+    margin-top: 5%;
+    max-height:750px;
+    overflow: auto;
+}
+</style>
+{% endput %}
+
+{% if page %}
+
+<ul>
+    <li>
+        <a href="/dev/spa">Pages</a>
+    </li>
+</ul>
+
+<div class="content">
+
+{% partial __SELF__~"::page" %}
+
+</div>
+
+{% else %}
+
+<div id="spaImageModal"></div>
+
+<div class="sr-l">
+    
+    <h2>Pages</h2>
+    
+    <ul class="pages">
+        {% for page in pages %}
+        <li>
+            <a href="/dev/spa/{{ page.slug }}" class="link {{ page.slug }} {% if pages | length == 1 or defaultPage == page.slug %}spaCurrent{% endif %}" data-name="{{ page.slug }}" data-section="{{ section }}">{{ page.name }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+<div class="sr-r">
+    <div class="content">
+        {{ __SELF__.getPage(defaultPage).text | raw }}
+    </div>
+</div>
+
+{% endif %}
